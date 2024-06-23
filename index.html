@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div class="container" id="inventoryContent" style="display: none;">
+        <h1>Inventario</h1>
+        <form id="inventoryForm" method="POST" action="save_inventory.php">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Cantidad</th>
+                        <th>Bodega</th>
+                        <th>Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                    
+                </tbody>
+            </table>
+            <div class="form-actions">
+                <button type="button" id="addItemButton">Agregar Ítem</button>
+                <button type="button" id="exportToExcel">Exportar a Excel</button>
+                <!-- <button type="submit">Guardar</button> -->
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="productos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
